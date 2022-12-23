@@ -3,6 +3,54 @@ body {
   position: relative;
   background: #181818;
   font-family: 'roboto', sans-serif;
+  transition: background 0.5s linear, color 0.5s linear;
+}
+
+/* Dark Mode */
+
+body.dark {
+  background-color: white;
+  color: black;
+}
+
+body.dark h1 {
+  color: black;
+}
+
+body.dark p {
+  color: black;
+}
+
+body.dark nav {
+  background-color: #D3D3D3
+}
+
+body.dark button.pre-btn {
+  background-color: white;
+}
+
+body.dark button.next-btn {
+  background-color: white;
+}
+
+body.dark button.enter-btn {
+  background-color: #000;
+}
+
+input {
+  visibility: hidden;
+}
+
+label {
+  background-color: #fff;
+  border-radius: 40px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.5s linear;
+  padding: 0 2.5vw;
 }
 
 .navbar {
@@ -45,6 +93,8 @@ body {
 .join-msg {
   text-transform: uppercase;
   color: #fff;
+  margin-left: 10px;
+  padding: 0 10px;
 }
 
 .join-btn {
@@ -64,12 +114,14 @@ body {
   text-transform: capitalize;
   font-weight: 900;
   font-size: 50px;
+  color: white;
 }
 
 .info {
   width: 50%;
   font-size: 20px;
   margin-top: 10px;
+  color: white;
 }
 
 .movie-list {
@@ -82,6 +134,7 @@ body {
 .movie-category {
   font-size: 20px;
   font-weight: 500;
+  color: white;
 }
 
 .movie-category::-webkit-scrollbar {
@@ -98,7 +151,7 @@ body {
   display: flex;
 }
 
-.movie-container::-webkit-scrollbar{
+.movie-container::-webkit-scrollbar {
   display: none;
 }
 
@@ -122,6 +175,7 @@ body {
   text-transform: capitalize;
   height: 20px;
   overflow: hidden;
+  color: white;
 }
 
 .pre-btn,
@@ -155,4 +209,68 @@ body {
   width: 20px;
   height: 20px;
   object-fit: contain;
+}
+
+/* Test */
+
+ .switch {
+  position: relative;
+  display: inline-block;
+  width: 2.5vw;
+  height: 34px;
+} 
+
+/* Hide default HTML checkbox
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+} */
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s ease-in;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s ease-out;
+}
+
+input:checked+.slider {
+  background-color: #2196F3;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(2.5vw);
+  -ms-transform: translateX(2.5vw);
+  transform: translateX(2.5vw);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
