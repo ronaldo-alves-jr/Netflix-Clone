@@ -37,6 +37,14 @@ body.dark button.enter-btn {
   background-color: #000;
 }
 
+.fa-moon {
+  color: #f1c40f
+}
+
+.fa-sun {
+  color: #f1c40f
+}
+
 input {
   visibility: hidden;
 }
@@ -213,12 +221,12 @@ label {
 
 /* Test */
 
- .switch {
+.switch {
   position: relative;
   display: inline-block;
   width: 2.5vw;
   height: 34px;
-} 
+}
 
 /* Hide default HTML checkbox
 .switch input {
@@ -252,13 +260,13 @@ label {
   transition: .4s ease-out;
 }
 
-input:checked+.slider {
+/* input:checked+.slider {
   background-color: #2196F3;
 }
 
 input:focus+.slider {
   box-shadow: 0 0 1px #2196F3;
-}
+} */
 
 input:checked+.slider:before {
   -webkit-transform: translateX(2.5vw);
